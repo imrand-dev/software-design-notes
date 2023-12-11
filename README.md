@@ -8,20 +8,20 @@
 
 ### What's a good design?
 
-<span style="background-color: #fff1a7;">A design is good, if the cost of changing is minimal.</span>
+> A design is good if the cost of changing is minimal.
 
 - Correct solution takes iterations, constantly in evolution
 - Almost Impossible to get it right the first time.
-    - Writing code first time is an exploration: many relationships are discovered, questions asked and answered.
-- Software is never written, it's always re-written.
-    - When we’re done, we should (utopically) delete it and rewrite it; rewriting will be much faster and we will rewrite with many lessons learned from first attempt.
+    - Writing code first time is an exploration: many relationships are discovered, and questions are asked and answered.
+- Software is never written, it's always rewritten.
+    - When we’re done, we should (topically) delete it and rewrite it; rewriting will be much faster and we will rewrite with many lessons learned from the first attempt.
 
 ### How to create a good design?
 
 - To create good design, the first step is to let go of the ego
 - Care about solving the problem, not a specific implementation
-    - We are not attached to the solutions; we are really attached to solving the problems of our hands.
-- There are 2 kinds of people that are dangerous to work
+    - We are not attached to the solutions; we are attached to solving the problems of our hands.
+- 2 kinds of people are dangerous to work
     - Who can't follow the instructions?
     - Who follows the instructions?
 - Take time to review and code
@@ -40,13 +40,13 @@
         - Inherent complexity - comes from the problem domain
         - Accidental complexity - comes from our implementation, e.g. deciding to use multi-threading
 - Simple is not necessarily familiar
-    - Simple means its easier to understand
+    - Simple means it is easier to understand
     - Familiar means we’re used to it, so it’s easy for us, but it doesn’t mean it’s simple.
 
-<span style="background-color: #fff1a7;">A good design is one that hides the inherent complexity and eliminates the accidental complexity</span>
+> A good design hides the inherent complexity and eliminates the accidental complexity
 - Think YAGNI - **You Aren't Gonna Need It**
     - When I should implement something new
-        - *ASK* How much do you know the problem domain?
+        - *ASK* How much do you know about the problem domain?
         - Cost of implementing
         ```
         NOW ---------------- LATER
@@ -55,7 +55,7 @@
         $N         <          $L  -
                     How probable?
                         High - do it
-                        low - postpne
+                        low - postpone
         ```
     - Why implement later?
         - we might learn more about the domain/vision/design of the thing we’re implementing e.g. we might figure out what DB features we need as the requirements clarify so we implement prod DB at the end.
@@ -63,7 +63,7 @@
         - (Thoughts: we might do some other high-ROI activity instead)
     - Postpone != procrastinate (procrastination is not getting things done that should have been done)
     - Don’t finalize one component at a time when several components interconnect. Work on several at a time and integrate them as they go along
-    - Don't really do something, until you really find value in doing it.
+    - Don't do something, until you find value in doing it.
     - Why we don’t postpone?
         * Because we’re scared that we won’t have time for testing.
         * We take decisions early to test them and we’re stuck with them.
@@ -78,7 +78,7 @@
             - Depending on a class is tight coupling, depending on an interface is lose coupling
         - High Cohesion - less responsibility
         - Low Coupling - low dependency
-        - <span style="background-color: #fff1a7;">A good design is high cohesion and low coupling</span>
+        - __A good design is high cohesion and low coupling__
 - DRY - **Don't repeat yourself**
     - Don’t duplicate code & effort
         - similar subsets of code in different places but doing the same thing.
@@ -95,14 +95,14 @@
         - Can't be optimized by anyhow
         - Low cohesion and high coupling
     - How long is a long method?
-        - number of lines can't be count
+        - The number of lines can't be counted
     - SLAP - *Single Level of Abstraction Principle* dictates the way you should organize your code (functions to be specific) to keep it maintainable.
-    - <span style="background-color: #fff1a7;">Don't comment what instead of comment why</span>
-        - If you need to comment what, you need to refactor.
+    - Don't comment what instead of comment why
+        - If you need to comment on what, you need to refactor.
 - **Open/Closed Principle**
     - Software module (class, function, component) should be open for extension and closed for modification
         - Closed from modification: don’t change older code when adding new features
-        - Open for extension: still add new features through polymorphism, reflection and loose coupling
+        - Open for extension: still add new features through polymorphism, reflection, and loose coupling
     - Abstraction and Polymorphism are the keys to making this happen.
     - 2 options to make an enhancement
         - change existing code ✗
